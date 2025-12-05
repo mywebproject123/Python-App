@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Management</title>
+    <link rel="stylesheet" href="{% static '/teacher.style.css' %}" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="search-wrap">
+        <div class="user-actions">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M13.094 2.085l-1.013-.082a1.082 1.082 0 0 0-.161 0l-1.063.087C6.948 2.652 4 6.053 4 10v3.838l-.948 2.846A1 1 0 0 0 4 18h4.5c0 1.93 1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5H20a1 1 0 0 0 .889-1.495L20 13.838V10c0-3.94-2.942-7.34-6.906-7.915zM12 19.5c-.841 0-1.5-.659-1.5-1.5h3c0 .841-.659 1.5-1.5 1.5zM5.388 16l.561-1.684A1.03 1.03 0 0 0 6 14v-4c0-2.959 2.211-5.509 5.08-5.923l.921-.074.868.068C15.794 4.497 18 7.046 18 10v4c0 .107.018.214.052.316l.56 1.684H5.388z"
+              />
+            </svg>
+          </button>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M12 21c4.411 0 8-3.589 8-8 0-3.35-2.072-6.221-5-7.411v2.223A6 6 0 0 1 18 13c0 3.309-2.691 6-6 6s-6-2.691-6-6a5.999 5.999 0 0 1 3-5.188V5.589C6.072 6.779 4 9.65 4 13c0 4.411 3.589 8 8 8z"
+              />
+              <path d="M11 2h2v10h-2z" />
+            </svg>
+          </button>
+        </div>
+
+        <figure class="user">
+          <div class="user-avatar">
+            <img
+              src="https://images.unsplash.com/photo-1440589473619-3cde28941638?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=42ebdb92a644e864e032a2ebccaa25b6&auto=format&fit=crop&w=100&q=80"
+              alt="Amanda King"
+            />
+          </div>
+          <figcaption>
+            Dr Stones <br />
+            <span style="color: #9e9e9e; font-size: 14px; font-weight: 300">Math Teacher</span>
+          </figcaption>
+        </figure>
+      </aside>
+
+      <header class="menu-wrap">
+        <div class="Logo-dash">
+          <img src="./logo.png" alt="" />
+        </div>
+        <nav>
+          <section class="dicover">
+            <ul>
+              <li>
+                <a href="/teacher/home/">
+                  <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+                      <path
+                        d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"
+                      />
+                    </svg>
+                  </div>
+                  Dashboard
+                </a>
+              </li>
+
+              <li class="active-link">
+                <a href="/teacher/students/">
+                  <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                      <path
+                        d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"
+                      />
+                    </svg>
+                  </div>
+                  Students
+                </a>
+              </li>
+
+              <li>
+                <a href="/teacher/exam/">
+                  <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                      <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+                      <path
+                        d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"
+                      />
+                    </svg>
+                  </div>
+                  Exams
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <li class="log-out">
+            <a href="{% url 'logout' %}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                <path
+                  fill-rule="evenodd"
+                  d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"
+                />
+                <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+              </svg>
+              Sign Out
+            </a>
+          </li>
+        </nav>
+      </header>
+
+      <main class="content-wrap">
+        <div class="content">
+          <section class="landing-contents">
+            <div class="schedule-container">
+              <!-- Form -->
+              <form class="filter-form" method="get">
+                <div class="date-form">
+                  <label for="date">Module Date: </label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    value="{{ selected_date|date:'Y-m-d' }}"
+                    max="{{ today|date:'Y-m-d' }}"
+                  />
+                </div>
+              
+                <div class="date-form">
+                  <label for="module">Select Module: </label>
+                  <select id="module" name="module">
+                    {% for module in modules %}
+                      <option value="{{ module.name }}"
+                        {% if module.name == selected_module_name %}selected{% endif %}>
+                        {{ module.name }}
+                      </option>
+                    {% endfor %}
+                  </select>
+                </div>
+              
+                <button type="submit">Search</button>
+              </form>
+              
+
+              <!--  -->
+              {% if error %}
+              <p class="error-message">{{ error }}</p>
+              {% endif %}              
+              {% if has_lesson_today %}
+                <h1>
+                  Students List for {{ selected_module_name }} Attendance ({{ selected_date }})
+                  {% if lesson_time %}<span> – {{ lesson_time }}</span>{% endif %}
+                </h1>
+              
+                <form method="post" class="table-form">
+                  {% csrf_token %}
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Student Name</th>
+                        <th>Present</th>
+                        <th>Absent</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for row in rows %}
+                      <tr>
+                        <td>#{{ row.student.student_code }}</td>
+                        <td>{{ row.student.full_name }}</td>
+                        <td>
+                          <label class="cl-checkbox">
+                            <input type="radio"
+                                  name="status_{{ row.student.id }}"
+                                  value="P"
+                                  {% if row.status == "P" %}checked{% endif %} />
+                            <span></span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="cl-checkbox absend-check">
+                            <input type="radio"
+                                  name="status_{{ row.student.id }}"
+                                  value="A"
+                                  {% if row.status == "A" %}checked{% endif %} />
+                            <span class="close-button"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                  <button class="update-btn" type="submit">Update</button>
+                </form>
+              {% else %}
+                <h1>No {{ selected_module_name }} lesson on {{ selected_date }}</h1>
+              {% endif %}
+              
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

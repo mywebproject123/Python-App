@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --text-color-dark: #202c4b;
+  --dark-blue: #3d5ee1;
+  --light-blue: #f2f5ff;
+  --dark-red: #ee443f;
+  --light-red: #fdecec;
+  --dark-green: #43b75d;
+  --light-green: #ecf8ef;
+  --dark-yellow: #ffaa00;
+  --light-yellow: #fff7e6;
+  --text-color-grey: #9e9e9e;
+}
+html,
+body {
+  color: var(--text-color-dark);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f5f5fa;
+  font-size: 16px;
+  line-height: 120%;
+  font-family: Open Sans, Helvetica, sans-serif;
+}
+.dashboard {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-gap: 0;
+  grid-template-columns: 240px auto;
+  grid-template-rows: 80px auto;
+  grid-template-areas: "menu search" "menu content";
+}
+.search-wrap {
+  grid-area: search;
+  background: #fff;
+  border-bottom: 1px solid #ede8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3em;
+}
+/* ============= avatar ============= */
+.search-wrap .user {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0 3em;
+}
+.search-wrap .user .user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.search-wrap .user .user-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.search-wrap .user figcaption {
+  margin: 0;
+  padding: 0 0 0 1em;
+  color: #1b253d;
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 100%;
+}
+
+.search-wrap .user-actions button {
+  border: 0;
+  background: none;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  margin-left: 0.5em;
+}
+.search-wrap .user-actions button svg {
+  position: relative;
+  top: 2px;
+}
+.search-wrap .user-actions button svg path,
+.search-wrap .user-actions button svg circle {
+  fill: #b6bbc6;
+  transition: fill 0.15s ease;
+}
+.search-wrap .user-actions button:hover svg path,
+.search-wrap .user-actions button:hover svg circle {
+  fill: #2b3a60;
+}
+
+/* =============== Slide Navbar ================ */
+.menu-wrap {
+  grid-area: menu;
+  padding-bottom: 3em;
+  overflow: auto;
+  background: #fff;
+  border-right: 1px solid #ede8f0;
+}
+.Logo-dash {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  padding: 0 3em;
+  padding-top: 1rem;
+}
+.Logo-dash > img {
+  max-width: 160px;
+}
+.menu-wrap nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 90%;
+  padding: 0 2rem;
+}
+.menu-wrap nav section {
+  display: block;
+  padding: 3rem 0 0;
+}
+
+.menu-wrap nav ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.menu-wrap nav li {
+  display: block;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  border-radius: 6px;
+  padding: 8px;
+}
+.menu-wrap nav li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  color: var(--text-color-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875em;
+  transition: color 0.15s ease;
+}
+.active-link {
+  background-color: #f2f5ff;
+}
+.active-link a {
+  color: #3d5ee1 !important;
+}
+.active-link .icon-wrapper {
+  background-color: #fff;
+}
+.icon-wrapper {
+  padding: 8px;
+  background: var(--light-blue);
+  border-radius: 8px;
+}
+.menu-wrap nav li a svg {
+  display: block;
+}
+.menu-wrap nav li a svg path,
+.menu-wrap nav li a svg circle {
+  fill: var(--text-color-dark);
+  transition: fill 0.15s ease;
+}
+.active-link a svg path {
+  fill: #3d5ee1 !important;
+}
+
+.log-out {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--light-red);
+}
+.log-out a,
+.log-out a svg path {
+  color: var(--dark-red) !important;
+  fill: var(--dark-red) !important;
+}
+
+/* ==================== contents =============== */
+.content-wrap {
+  grid-area: content;
+  padding: 3em;
+  overflow: auto;
+}
+.landing-contents {
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+}
+/* =================== Schedule =============== */
+.schedule-container {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 16px;
+  width: 75%;
+}
+
+.schedule-container h1 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #3d5ee1;
+}
+
+.schedule-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.schedule-container th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.schedule-container th {
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+}
+
+.lesson {
+  display: flex;
+}
+.line-schedule {
+  height: 60px;
+  width: 3px;
+  border-radius: 4px;
+}
+.lesson-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.4rem;
+  padding-top: 0.5rem;
+  font-size: 12px;
+  font-weight: 400;
+}
+.lesson-wrapper span {
+  font-size: 10px;
+  color: var(--text-color-grey);
+}
+.ls-math {
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+}
+.ls-eng {
+  background-color: var(--light-red);
+  color: var(--dark-red);
+}
+.ls-history {
+  background-color: var(--light-green);
+  color: var(--dark-green);
+}
+.ls-chemistry {
+  background-color: var(--light-yellow);
+  color: var(--dark-yellow);
+}
+
+/* ============= Upcoming Exams ================== */
+.Upcoming-exams {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 30%;
+}
+.Upcoming-exams h3 {
+  margin-bottom: 1.5rem;
+}
+.exam-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem 0;
+  border-top: 2px solid #ececec;
+}
+.exam-info h4 {
+  font-size: 14px !important;
+  color: var(--dark-blue);
+}
+.exam-info p {
+  font-size: 12px;
+  color: var(--text-color-grey);
+}
+.icon-wrapper svg {
+  color: var(--dark-blue);
+}
+
+/*=================== Attendance Page css =============== */
+.line-schedule .present {
+  background-color: #43b75d;
+}
+
+.line-schedule .absent {
+  background-color: #ee443f;
+}
+.attendance-contents > .schedule-container {
+  width: 100%;
+  padding: 2rem;
+}
+.attendance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.month-select-form select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.table-wrapper {
+  overflow-x: auto; /* Enables horizontal scrolling for the wrapper */
+  width: 100%; /* Or a specific width for your table container */
+}
+.table-wrapper table {
+  width: max-content;
+  margin-bottom: 1rem;
+}
+.fixed-column {
+  position: sticky; /* Makes the column sticky */
+  left: 0; /* Sticks it to the left edge */
+  background-color: var(--light-blue); /* Optional: Add a background to differentiate */
+  z-index: 1; /* Ensures it stays on top of other content during scroll */
+  color: var(--dark-blue) !important;
+  text-align: center;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  border: 1px solid var(--dark-blue) !important;
+}
+.table-wrapper table thead th span {
+  display: block;
+  font-size: 14px !important;
+  color: var(--dark-blue);
+  font-weight: 600 !important;
+}
+.table-wrapper table thead th {
+  font-size: 12px;
+  color: var(--text-color-grey);
+  text-align: center;
+  font-weight: 300;
+}
